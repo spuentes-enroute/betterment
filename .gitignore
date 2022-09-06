@@ -10,7 +10,6 @@
 /test/version_tmp/
 /tmp/
 tmp/
-ruby/homework/migration/tmp
 # Used by dotenv library to load environment variables.
 # .env
 
@@ -55,3 +54,4 @@ build-iPhoneSimulator/
 
 # Specific folders
 ruby/example/*
+ruby/homework/migration/tmp
