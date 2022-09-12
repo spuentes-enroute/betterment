@@ -52,3 +52,52 @@ class Article < ApplicationRecord
 end
 ```
 In order to see the errors you can type: `article.errors.full_messages`
+
+
+## Show features
+The steps are to:
+1) Have a route for it
+
+2) Have the corresponding controller/action that the route directs the request to
+
+3) Have a corresponding view to display to the user who makes the request
+
+
+### Example of route
+The following code will enable only the show view
+```ruby
+Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # root 'application#hello'
+  root 'pages#home'
+  get 'about', to: 'pages#about'
+  resources :articles, only: [:show]
+end
+```
+
+### Example of view
+Presentation tags: `<%= ruby_code %>`\
+Evaluate expression tags: `<% ruby_code %>`
+
+```html
+<h1>Showing article details</h1>
+
+<p><strong>Title: </strong>
+  <%= @article.title %></p>
+<p><strong>Description: </strong>
+  <%= @article.description %></p>
+```
+
+### Debugging
+```ruby
+class ArticlesController < ApplicationController
+
+  def show
+    debugger
+   @article = Article.find(params[:id])
+  end
+end
+```
+
+The program will stop on the `debugger` line. You can get the content of the variable until that point by typing the identifier in the console. Type `continue` to resume the program.
