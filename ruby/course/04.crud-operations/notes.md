@@ -89,7 +89,7 @@ Evaluate expression tags: `<% ruby_code %>`
   <%= @article.description %></p>
 ```
 
-### Debugging
+## Debugging
 ```ruby
 class ArticlesController < ApplicationController
 
@@ -101,3 +101,34 @@ end
 ```
 
 The program will stop on the `debugger` line. You can get the content of the variable until that point by typing the identifier in the console. Type `continue` to resume the program.
+
+
+## Forms
+
+You will need to add the new and create actions in the articles_controller.rb file like below:\
+```ruby
+def new
+end
+
+def create
+end 
+```
+
+You will also need to create a view template for the new view. So, in the `app/views/articles` folder create a new file called `new.html.erb` and fill it in like below:
+```erb
+<h1>Create a new article</h1>
+ 
+<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+  <p> 
+    <%= f.label :title %><br/> 
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br/> 
+    <%= f.text_area :description %> 
+  </p>
+  <p>
+    <%= f.submit %> 
+  </p>
+<% end %>
+```
