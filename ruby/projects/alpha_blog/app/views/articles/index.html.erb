@@ -10,9 +10,6 @@
   </thead>
   <tbody>
     <% @articles.each do |article| %>
-    <div class="card-header">
-      by <%= article.user.username if article.user %>
-    </div>
     <tr>
       <td><%= article.title %></td>
       <td><%= article.description %></td>
