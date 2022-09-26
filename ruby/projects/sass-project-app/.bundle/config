@@ -1,3 +1,2 @@
 ---
 BUNDLE_BUILD__PG: "--with-pg-config=/usr/local/bin/pg_config"
-BUNDLE_WITHOUT: "production"
