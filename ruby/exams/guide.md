@@ -3,11 +3,11 @@
 <ol>
 <li>
   ¿Cómo se maneja el dinero en rails?<br>
-  R: gema money</li>
+  gema money</li>
 <li>¿Qué es un hash?<br>
-  R: Un hash es una colección de datos en donde cada valor está asociado a una llave.</li>
+  Un hash es una colección de datos en donde cada valor está asociado a una llave.</li>
 <li>Que tipo de dato se usa en sus llaves:<br>
-  R: Los símbolos</li>
+  Los símbolos</li>
 <li>Diferencia entre símbolo y string:<br>
   <ul>
   <li>Un símbolo es el objeto mas básico que puedes crear en Ruby: es un nombre y una ID interna.</li>
@@ -115,9 +115,32 @@ class Article < ApplicationRecord
 end
 ```
 
+**Many to many relationship**<br>
+One way to set up a many-to-many connection with another model is use has_many :through association. In order to do that, we need to create a new join model. We will use Physician, Patient and Appointment as example.
+
+```ruby
+class Physician < ApplicationRecord
+  has_many :appointments
+  has_many :patients, through: :appointments
+end
+
+class Appointment < ApplicationRecord
+  belongs_to :physician
+  belongs_to :patient
+end
+
+class Patient < ApplicationRecord
+  has_many :appointments
+  has_many :physicians, through: :appointments
+end
+```
+
 </li>
-<li>up, down, change</li>
-<li>patrones relacionados al service y helpers</li>
-<li>archivos de configuracion en general</li>
+<li>Up, down, change<br>
+Up or Down methods are what rails consider to be an old-style of migration.<br>
+Change method instead of up method and Active Record is smart enough to know how to reverse the migration.</li>
+<li>Patrones relacionados al service y helpers<br>
+</li>
+<li>Archivos de configuracion en general</li>
 
 </ol>

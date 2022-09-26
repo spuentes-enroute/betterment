@@ -1,0 +1,28 @@
+<h1>Users</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>role</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.role %></td>
+      <td><%= link_to 'Show', users_index_path(user) %></td>
+      <td><%= link_to 'Edit', edit_user_registration_path(user)%></td>
+      <td><%= link_to 'Delete', users_index_path(user), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } %></td>
+    </tr>
+    <% end %> 
+  </tbody>
+</table>
+
+<p>
+  <%= link_to 'Create new user', new_user_registration_path %>
+</p>
