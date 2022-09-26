@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Required gems for the project
-gem "her"
+# gem "her"
 
 gem 'devise'
 
