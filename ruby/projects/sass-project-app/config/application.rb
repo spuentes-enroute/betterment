@@ -1,3 +1,5 @@
+require 'devise'
+require 'milia'
 require_relative "boot"
 
 require "rails/all"
