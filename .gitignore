@@ -55,3 +55,6 @@ build-iPhoneSimulator/
 # Specific folders
 ruby/example/*
 ruby/homework/migration/tmp
+
+Gemfile.lock
+master.key
