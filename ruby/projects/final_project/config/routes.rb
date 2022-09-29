@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/plans'
   root 'pages#home'
   get 'users/new'
   get 'users/index'
@@ -6,5 +7,6 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+
+  get 'signup', to: 'users#new'
 end
