@@ -1,17 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <h1 class="mt-5">Where teamwork comes together</h1>
-      <p>Wherever you’re working, whatever your time zone: manage projects,
-      collaborate, and move your team’s ideas forward with Trello.</p>
+<div class="col-md-8">
+  <h2 class="mt-5">Try Premium free for 15 days</h2>
+  <p>See your work in a whole new way with Trello views.</p>
 
-      <% if current_user %>
-        <p>Hello <%= current_user.email %>!</p>
-        <p>You are a [<%= current_user.role %>]</p>
-        <%= link_to "Users", users_index_path %>
-      <% else %>
-        <%= link_to "Sign Up - It's free", new_user_registration_path, class:"btn btn-primary"%>
-      <% end %>
-    </div>
-  </div>
+  <% if current_user %>
+    <p>Hello <%= current_user.email %>!</p>
+    <p>You are a [<%= current_user.role %>]</p>
+    <%= link_to "Users", users_index_path %>
+  <% else %>
+    <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary"%>
+  <% end %>
 </div>

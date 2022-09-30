@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :user
+  belongs_to :plan
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
