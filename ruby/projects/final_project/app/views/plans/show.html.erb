@@ -1,0 +1,14 @@
+<div class="col-md-12">
+  <h1>Plan details</h1>
+
+  <div class="card">
+    <h5 class="card-header"><%=@plan.name %></h5>
+    <div class="card-body">
+      <h5 class="card-title">$<%= @plan.price %></h5>
+      <p class="card-text"><%= "#{@plan.period} #{@plan.period_type}" %></p>
+      <%= link_to 'Edit', edit_plan_path(@plan) %> |
+      <%= link_to 'Delete', plan_path(@plan), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } %> |
+      <%= link_to 'Return to plans listing', plans_path %>
+    </div>
+  </div>
+</div>
