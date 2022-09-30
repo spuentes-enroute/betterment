@@ -1,24 +1,25 @@
-# Ruby on Rails Final Project
+# Final Project - Team and task manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install the project and type `bundle install` in order to install the project.
 
-Things you may want to cover:
+Things this project cover:
 
-* Ruby version
+- Manage users, managers and administrators
 
-* System dependencies
+- Manage boards and teams
 
-* Configuration
+- Plans edited by administrators
 
-* Database creation
+- Task management
 
-* Database initialization
+This project should be built with Ruby on Rails and the following Gems:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Rails Money](https://github.com/RubyMoney/money-rails)
+- [Authorized Persona](https://github.com/Betterment/authorized_persona)
+- [Her::Model](https://github.com/remi/her)
+- [Factory Bot](https://github.com/thoughtbot/factory_bot_rails)
+- [Muck](https://github.com/tatemae/muck-engine)
+- [RSpec](https://github.com/rspec/rspec-rails)
+- [Bootstrap](https://github.com/twbs/bootstrap-rubygem)
+- [Rubocop](https://github.com/rubocop/rubocop-rails)
+- [Devise](https://github.com/heartcombo/devise)

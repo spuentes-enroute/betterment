@@ -1,9 +1,10 @@
 class User < ApplicationRecord
+  belongs_to :plan
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
   enum role: [:user, :manager, :admin]
-
+  
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
