@@ -1,2 +1,3 @@
-class User < ApplicationRecord
+class Board < ApplicationRecord
+  belongs_to :user
 end
