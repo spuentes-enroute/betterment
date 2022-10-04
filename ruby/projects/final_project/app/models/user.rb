@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   belongs_to :plan
-  has_many :boards
+  has_many :teams
+  has_many :boards, through: :teams
   
   enum role: [:user, :manager, :admin]
   
