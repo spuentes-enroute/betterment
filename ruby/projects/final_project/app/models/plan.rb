@@ -1,9 +1,10 @@
 class Plan < ApplicationRecord
-  validate :only_one
-
   has_many :users
-
+  
+  validate :only_one
+  
   monetize :price_cents
+  
   enum period_type: [:days, :months, :years]
 
   private

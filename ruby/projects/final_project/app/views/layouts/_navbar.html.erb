@@ -9,13 +9,16 @@
         <li class="nav-item">
           <%= link_to "Plans", plans_path, class:"nav-link"%>
         </li>
+        <li class="nav-item">
+          <%= link_to "Users", users_path, class:"nav-link"%>
+        </li>
       </ul>
       <div class="d-flex">
         <% if current_user %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-outline-primary" %>
         <% else %>
           <%= link_to "Log in", new_user_session_path, class:"btn btn-secondary me-1"%>
-          <%= link_to "Get Trello for free", new_user_registration_path, class:"btn btn-primary"%>
+          <%= link_to "Get Trello for free", signup_path, class:"btn btn-primary"%>
         <% end %>
       </div>
     </div>
