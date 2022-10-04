@@ -1,0 +1,21 @@
+<h1>Pages#plans</h1>
+
+<div class="col-md-12">
+  <p><%= link_to "New plan", new_plan_path %></p>
+
+  <div class="row">
+    <% @plans.each do |plan| %>
+      <div class="col-md-4">
+        <div class="card">
+          <h5 class="card-header"><%=plan.name %></h5>
+          <div class="card-body">
+            <h5 class="card-title">$<%= plan.price %></h5>
+            <p class="card-text"><%= "#{plan.period} #{plan.period_type}" %></p>
+            <%= link_to 'Edit', edit_plan_path(plan) %> |
+            <%= link_to 'Delete', plan_path(plan), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
