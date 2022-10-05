@@ -20,3 +20,398 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 30ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 7110)
 
 
+Started GET "/" for ::1 at 2022-09-27 15:39:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/saul/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/saul/.rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.7ms | Allocations: 633)
+Completed 200 OK in 19ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 5835)
+
+
+Started GET "/home" for ::1 at 2022-09-27 15:43:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for ::1 at 2022-09-27 15:43:15 -0500
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-09-27 15:45:30 -0500
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-09-27 15:45:43 -0500
+  
+SyntaxError (/Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end'
+  protect_from_forgery:
+                      ^
+):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-09-27 15:47:31 -0500
+Processing by PagesController#home as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3091)
+
+
+  
+NoMethodError (undefined method `authenticate_tenant!' for #<PagesController:0x00000000012c50>
+Did you mean?  authenticate_with_http_token):
+  
+activesupport (7.0.4) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/cookies.rb:696:in `call'
+activerecord (7.0.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-09-27 15:47:45 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 244.1ms | Allocations: 72039)
+Completed 200 OK in 248ms (Views: 247.4ms | ActiveRecord: 0.0ms | Allocations: 73109)
+
+
+Started GET "/" for ::1 at 2022-09-27 15:48:19 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1595)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2631)
+
+
+Started GET "/" for ::1 at 2022-09-27 15:52:31 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 5072)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 6113)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2022-09-27 15:54:45 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6642)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 6910)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2022-09-27 15:54:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 5374.9ms | Allocations: 130647)
+Completed 200 OK in 5391ms (Views: 5379.1ms | ActiveRecord: 0.0ms | Allocations: 136042)
+
+
+Started GET "/users/edit.1" for ::1 at 2022-09-27 16:07:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit.1"):
+  
+Started GET "/" for ::1 at 2022-09-27 16:07:19 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5475)
+Completed 200 OK in 10ms (Views: 9.8ms | Allocations: 5781)
+
+
+Started GET "/" for ::1 at 2022-09-29 15:29:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 5906.0ms | Allocations: 171762)
+Completed 500 Internal Server Error in 5922ms (ActiveRecord: 0.0ms | Allocations: 177315)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    12: 
+    13:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    14:     <!-- Size should be 144 x 144 pixels -->
+    15:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    16: 
+    17:     <!-- For iPhone with high-resolution Retina display: -->
+    18:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2022-09-29 15:29:49 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 8045)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 8327)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    12: 
+    13:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    14:     <!-- Size should be 144 x 144 pixels -->
+    15:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    16: 
+    17:     <!-- For iPhone with high-resolution Retina display: -->
+    18:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2022-09-29 15:30:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 105.9ms | Allocations: 42970)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms | Allocations: 48523)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    12: 
+    13:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    14:     <!-- Size should be 144 x 144 pixels -->
+    15:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    16: 
+    17:     <!-- For iPhone with high-resolution Retina display: -->
+    18:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2022-09-29 15:31:14 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 12968)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms | Allocations: 14029)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/app/assets/config
+  /Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/app/assets/images
+  /Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/app/assets/javascripts
+  /Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/app/assets/stylesheets
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/twitter-bootstrap-rails-5.0.0/app/assets/fonts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/twitter-bootstrap-rails-5.0.0/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/twitter-bootstrap-rails-5.0.0/app/assets/stylesheets
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/twitter-bootstrap-rails-5.0.0/vendor/assets/stylesheets
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/stimulus-rails-1.1.0/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/turbo-rails-1.1.1/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/importmap-rails-1.1.5/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/app/assets/stylesheets
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/actioncable-7.0.4/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/activestorage-7.0.4/app/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/actionview-7.0.4/lib/assets/compiled
+  /Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/app/javascript
+  /Users/saul/Documents/Enroute/Betterment/training/ruby/projects/sass-project-app/vendor/javascript
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/popper_js-2.11.6/assets/javascripts
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/bootstrap-5.1.3/assets/stylesheets
+  /Users/saul/.rvm/gems/ruby-3.0.0/gems/bootstrap-5.1.3/assets/javascripts):
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= javascript_importmap_tags %>
+    12:   </head>
+    13:   <body>
+    14: 
+  
+app/assets/javascripts/application.js:7
+app/views/layouts/application.html.erb:11
+Started GET "/" for ::1 at 2022-09-29 15:31:58 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 44893)
+Completed 200 OK in 159ms (Views: 158.0ms | ActiveRecord: 0.0ms | Allocations: 45237)
+
+
+Started GET "/" for ::1 at 2022-09-29 15:49:45 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 5157.9ms | Allocations: 61088)
+Completed 500 Internal Server Error in 5163ms (Allocations: 62141)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000d5e8>
+Did you mean?  current_page?):
+    27:             <li><%= link_to "Link3", "/path3"  %></li>
+    28:           </ul>
+    29:           <ul class="nav navbar-right col-md-4">
+    30:             <% if current_user %>
+    31:               <li class="col-md-8 user-name">
+    32:                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+    33:               </li>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/" for ::1 at 2022-09-29 15:51:05 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 12500)
+Completed 500 Internal Server Error in 32ms (Allocations: 13552)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000d958>
+Did you mean?  current_page?):
+    27:             <li><%= link_to "Link3", "/path3"  %></li>
+    28:           </ul>
+    29:           <ul class="nav navbar-right col-md-4">
+    30:             <% if current_user %>
+    31:               <li class="col-md-8 user-name">
+    32:                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+    33:               </li>
+  
+app/views/layouts/application.html.erb:30
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5995129740653416965)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220929205445)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "role" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220929205445"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5995129740653416965)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-09-29 15:57:19 -0500
+  
+NoMethodError (undefined method `devise' for User:Class):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:3:in `<main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-09-29 15:58:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 366)
+  Rendered layout layouts/application.html.erb (Duration: 1658.9ms | Allocations: 63714)
+Completed 200 OK in 1680ms (Views: 1665.4ms | ActiveRecord: 0.0ms | Allocations: 69316)
+
+
+Started GET "/" for ::1 at 2022-09-29 16:01:51 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 882)
+  Rendered layout layouts/application.html.erb (Duration: 4454.9ms | Allocations: 53467)
+Completed 200 OK in 4460ms (Views: 4458.8ms | ActiveRecord: 0.0ms | Allocations: 54559)
+
+
+Started GET "/yourimagename.png" for ::1 at 2022-09-29 16:01:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/yourimagename.png"):
+  
