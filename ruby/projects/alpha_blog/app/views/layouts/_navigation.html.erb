@@ -15,14 +15,11 @@
             Articles
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
-            <%= link_to "View articles", articles_path, class: "dropdown-item" %>
+            <li><%= link_to "Create new article", new_article_path, class: "dropdown-item" %></li>
+            <li><%= link_to "View articles", articles_path, class: "dropdown-item" %></li>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
       <form class="d-flex">
