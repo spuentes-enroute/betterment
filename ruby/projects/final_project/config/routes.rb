@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :plans
+  resources :plans, :boards
   
   get 'users', to: 'users#index'
   get 'boards', to: 'boards#index'

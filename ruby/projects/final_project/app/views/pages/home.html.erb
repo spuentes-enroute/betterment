@@ -1,7 +1,21 @@
 <div class="col-md-8">
   <h2>Try Premium free for 15 days</h2>
   <p>See your work in a whole new way with Trello views.</p>
-
+  Your teams
+  <% if @team %>
+    <!-- team and settings nav -->
+    <%= @team.name %>
+    <!-- boards, limit: 10 -->
+    <% @boards.each do |board| %>
+      <div>
+        Board <%= board.id %>
+        <p><%= board.title if board %></p>
+        <%= link_to "View", board_path(board), class:"btn btn-primary"%>
+      </div>
+    <% end %>
+  <% else %>
+    There is no teams
+  <% end %>
   <% if current_user %>
     <%= link_to "Users", users_path %>
   <% else %>
