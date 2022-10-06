@@ -1,0 +1,8 @@
+
+<%= form_with(model: [@board, @task_list], url: board_task_lists_path, local: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <%= f.submit %>
+<% end %>

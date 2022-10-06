@@ -1,0 +1,14 @@
+<h1>
+  <%= @board&.title %>
+</h1>
+<% if @board.task_lists.empty? %>
+  <p>Empty board</p>
+<% else %>
+  <h2>Task List</h2>
+  <% @board.task_lists.each do |task_list| %>
+    <%= task_list.title %>
+    <%= link_to "Add a card", new_board_task_list_task_path(@board, task_list) %>
+  <% end %>
+
+<% end %>
+<%= link_to "New list", new_board_task_list_path(@board), class: "btn btn-primary" %>
