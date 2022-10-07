@@ -1,4 +1,6 @@
-Rails.application.routes.default_url_options[:host] = "localhost:3000"
+# frozen_string_literal: true
+
+Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 
 Rails.application.routes.draw do
   root 'pages#home'

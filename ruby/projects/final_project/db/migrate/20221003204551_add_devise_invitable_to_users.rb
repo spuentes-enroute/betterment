@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddDeviseInvitableToUsers < ActiveRecord::Migration[6.1]
   def change
     add_column :users, :invitation_token, :string

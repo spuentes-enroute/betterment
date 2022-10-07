@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class TasksController < ApplicationController
   def new
-    debugger
     @task = Tasks.new(params[:board_id], params[:task_list_id])
   end
 

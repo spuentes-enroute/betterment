@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class TaskListsController < ApplicationController
   def index
     @task_lists = TaskLists.all
   end
 
   def new
-    # debugger
     @task_list = TaskLists.new
   end
 
@@ -13,10 +14,10 @@ class TaskListsController < ApplicationController
     @board = Board.find(params[:board_id])
     @task_list.board = @board
     if @task_list.save
-      flash[:notice] = "List was created successfully"
+      flash[:notice] = 'List was created successfully'
       redirect_to @board
     else
-      flash[:alert] = "There was an error creating your list."
+      flash[:alert] = 'There was an error creating your list.'
       render 'new'
     end
   end
@@ -24,5 +25,4 @@ class TaskListsController < ApplicationController
   def task_list_params
     params.require(:task_lists).permit(:title)
   end
-
 end
