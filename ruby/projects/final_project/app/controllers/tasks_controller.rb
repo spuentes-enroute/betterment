@@ -2,14 +2,23 @@
 
 class TasksController < ApplicationController
   def new
-    @task = Tasks.new(params[:board_id], params[:task_list_id])
+    @task = Task.new
   end
 
   def create
-    @task_list = Tasks.new(task_params)
+    @task = Task.new(task_params)
+    @board = Board.find(params[:board_id])
+    @task.task_lists_id = params[:task_list_id]
+    if @task.save
+      flash[:notice] = 'Task was created successfully'
+      redirect_to @board
+    else
+      flash[:alert] = 'There was an error creating your task.'
+      render 'new'
+    end
   end
 
   def task_params
-    params.require(:tasks).permit(:title)
+    params.require(:task).permit(:title)
   end
 end

@@ -1,5 +1,4 @@
-
-<%= form_with(model: [@board, @task_list, @task], url: board_task_list_tasks_path,  local: true) do |f| %>
+<%= form_with(model: @board, local:true) do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title %>

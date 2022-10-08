@@ -1,3 +1,31 @@
 // Place all the styles related to the boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.board-card {
+  width: 200px;
+  height: 80px;
+  border-radius: 2px;
+  .title {
+    color: white;
+    font-weight: bold;
+  }
+  &.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.board__grid {
+  display: flex;
+
+}
+.tasklist {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    padding: 5px;
+    margin: 0 5px;
+  }
+}
