@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddExpirationDateToUser < ActiveRecord::Migration[6.1]
   def change
     add_column :users, :expiration_date, :date

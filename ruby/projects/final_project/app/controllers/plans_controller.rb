@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PlansController < ApplicationController
-  before_action :set_plan, only: [:show, :edit, :update, :destroy]
+  before_action :set_plan, only: %i[show edit update destroy]
 
   def index
     @plans = Plan.all
@@ -9,20 +11,20 @@ class PlansController < ApplicationController
     @plan = Plan.new
   end
 
-  def show
-  end
+  def show; end
 
   def create
     @plan = Plan.new(plan_params)
     if @plan.save
-      flash[:notice] = "Plan was created successfully"
+      flash[:notice] = 'Plan was created successfully'
       redirect_to @plan
     else
-      puts @plan
+      Rails.logger.debug @plan
     end
   end
 
   private
+
   def set_plan
     @plan = Plan.find(params[:id])
   end

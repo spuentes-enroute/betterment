@@ -1,0 +1,23 @@
+<div class="container">
+  <% @teams.each do |team| %>
+    <% team.boards.each do |board| %>
+      <div class="row">
+        Team <%= team.name %>
+      </div>
+      <div class="row">
+        <%= link_to new_board_path do %>
+          <div class="board-card bg-light empty">
+            Create new board
+          </div>
+        <% end %>
+        <%= link_to(board) do %>
+          <div class="board-card bg-primary">
+            <div class="title">
+              <%= board.title %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
