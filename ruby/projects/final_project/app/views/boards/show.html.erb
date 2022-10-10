@@ -14,8 +14,13 @@
         <div class="tasklist__header">
           <%= task_list.title %>
         </div>
+        <% task_list.tasks.each do |task| %>
+          <div class="task__item">
+            <%= task.title %>
+          </div>
+        <% end %>
         <div class="tasklist__footer">
-          <%= link_to "Add task", new_board_task_list_task_path(@board, task_list) %>
+          <%= link_to "+ Add task", new_board_task_list_task_path(@board, task_list) %>
         </div>
       </div>
     <% end %>

@@ -1,3 +1,25 @@
 // Place all the styles related to the task_lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.tasklist {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 0 10px;
+    margin: 0 5px;
+    width: 240px;
+    border-radius: 3px;
+    height: fit-content;
+  }
+  &__header {
+    padding: 8px 5px;
+    font-weight: bold;
+  }
+  &__footer {
+    color: grey;
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+}

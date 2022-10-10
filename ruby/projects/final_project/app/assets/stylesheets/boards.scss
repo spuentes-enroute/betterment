@@ -18,14 +18,4 @@
 
 .board__grid {
   display: flex;
-
-}
-.tasklist {
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: lightgrey;
-    padding: 5px;
-    margin: 0 5px;
-  }
 }
