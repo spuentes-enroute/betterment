@@ -1,0 +1,29 @@
+<h1>
+  <%= @board.title %>
+</h1>
+<div>
+  <%= link_to "Edit Board", edit_board_path %>
+</div>
+<% if @board.task_lists.empty? %>
+  <p>Empty board</p>
+<% else %>
+  <!-- BOARD GRID -->
+  <div class="board__grid">
+    <% @board.task_lists.each do |task_list| %>
+      <div class="tasklist__wrapper">
+        <div class="tasklist__header">
+          <%= task_list.title %>
+        </div>
+        <% task_list.tasks.each do |task| %>
+          <div class="task__item">
+            <%= task.title %>
+          </div>
+        <% end %>
+        <div class="tasklist__footer">
+          <%= link_to "+ Add task", new_board_task_list_task_path(@board, task_list) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= link_to "New list", new_board_task_list_path(@board), class: "btn btn-primary" %>

@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_30_023354) do
+ActiveRecord::Schema.define(version: 2022_10_06_032921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "team_id"
+    t.string "title"
+  end
 
   create_table "plans", force: :cascade do |t|
     t.string "name"
@@ -24,6 +31,28 @@ ActiveRecord::Schema.define(version: 2022_09_30_023354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+  end
+
+  create_table "task_lists", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "board_id"
+    t.string "title"
+    t.index ["board_id"], name: "index_task_lists_on_board_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.text "title"
+    t.bigint "task_lists_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["task_lists_id"], name: "index_tasks_on_task_lists_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,8 +66,18 @@ ActiveRecord::Schema.define(version: 2022_09_30_023354) do
     t.datetime "updated_at", precision: 6, null: false
     t.date "expiration_date"
     t.string "purchases", default: [], array: true
+    t.string "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer "invitation_limit"
+    t.integer "invited_by_id"
+    t.string "invited_by_type"
+    t.integer "team_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "task_lists", "boards"
 end
