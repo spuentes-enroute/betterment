@@ -139,8 +139,4 @@ end
 <li>Up, down, change<br>
 Up or Down methods are what rails consider to be an old-style of migration.<br>
 Change method instead of up method and Active Record is smart enough to know how to reverse the migration.</li>
-<li>Patrones relacionados al service y helpers<br>
-</li>
-<li>Archivos de configuracion en general</li>
-
 </ol>
