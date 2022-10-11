@@ -3,7 +3,7 @@
 class Plan < ApplicationRecord
   has_many :users
 
-  validate :only_one
+  validate :three_plans
 
   monetize :price_cents
 
@@ -11,7 +11,7 @@ class Plan < ApplicationRecord
 
   private
 
-  def only_one
-    errors.add :base, 'There can only be one global setting/your message here' if Global.count >= 1
+  def three_plans
+    errors.add :base, 'There can only be three plans in the application' if Global.count >= 3
   end
 end
