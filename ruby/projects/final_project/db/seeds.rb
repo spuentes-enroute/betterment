@@ -44,15 +44,15 @@ user = User.create({ email: 'user1@test.com', password: 'pass123', role: 0 })
 team = Team.create({ name: "The best team" })
 
 # Creating boards
-Board.create({ title: "My first board", team: team })
-Board.create({ title: "Second board", team: team })
+Board.create({ title: "Private board", visibility: 1, team: team})
+Board.create({ title: "Public board", visibility: 0, team: team })
 
 
 Board.all.each do |board|
-  board.task_lists << TaskLists.create({ title: "To Do" })
-  board.task_lists << TaskLists.create({ title: "In Progress" })
-  board.task_lists << TaskLists.create({ title: "Testing" })
-  board.task_lists << TaskLists.create({ title: "Done" })
+  board.task_lists << TaskLists.create({ title: "To Do", color: 'grey', priority: 1 })
+  board.task_lists << TaskLists.create({ title: "In Progress", color: 'blue', priority: 2 })
+  board.task_lists << TaskLists.create({ title: "Testing", color: 'orange', priority: 3 })
+  board.task_lists << TaskLists.create({ title: "Done", color: 'green', priority: 4 })
 end
 
 TaskLists.last(7).each do |task_list|

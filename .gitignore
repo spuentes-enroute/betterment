@@ -60,3 +60,4 @@ ruby/homework/migration/tmp
 Gemfile.lock
 master.key
 local.yml
+.DS_Store
