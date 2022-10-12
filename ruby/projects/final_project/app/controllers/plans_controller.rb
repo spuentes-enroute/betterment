@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class PlansController < ApplicationController
+  # i don't see the edit method. try the except keyword to make diminish it's length.
   before_action :set_plan, only: %i[show edit update destroy]
 
   def index

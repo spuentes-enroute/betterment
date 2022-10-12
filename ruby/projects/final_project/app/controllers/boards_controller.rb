@@ -9,6 +9,7 @@ class BoardsController < ApplicationController
 
   def update
     if @board.update(board_params)
+      # messages should be managed through translations
       flash[:notice] = "Article was updated successfully"
       redirect_to @board
     else
