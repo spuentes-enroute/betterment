@@ -84,6 +84,7 @@ Scope dentro de un modelo
 Validations dentro de modelos
 
 Relaciones polimorficas
+La asociación se puede resumir como una asociación de uno a muchos entre un modelo y varios otros modelos al mismo tiempo. Y en aplicaciones reales, esta relación también es muy común, por ejemplo, se puede aplicar al módulo de mensajes, módulo de comentarios, módulo de etiquetas, etc. en la estación. La siguiente figura es el diagrama E-R del módulo de comentarios bajo la relación polimórfica.
 
 Patrones de diseño en rails
 Presenters -
